@@ -1,0 +1,14 @@
+docs
+test
+e2e
+examples
+src
+tmp
+gulpfile.js
+.npmignore
+.eslintrc.json
+.travis.yml
+typings*
+tsconfig.json
+tsconfig.aot.json
+tslint.json
