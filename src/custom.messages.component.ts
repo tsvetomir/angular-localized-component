@@ -5,18 +5,19 @@ import { Message, props } from './messages.base';
   providers: [
       {
           provide: Message,
-          useExisting: forwardRef(() => LocalizedMessagesComponent)// tslint:disable-line:no-forward-ref
+          useExisting: forwardRef(() => CustomMessagesComponent)// tslint:disable-line:no-forward-ref
       }
   ],
-  selector: 'localized-component-messages',
+  selector: 'component-messages',
   template: ``
 })
-export class LocalizedMessagesComponent extends Message implements OnInit{
+export class CustomMessagesComponent extends Message implements OnInit{
 
     ngOnInit() {
-        console.log('register localized messages');
+        console.log('register custom messages');
         props.forEach(key => {
             this.service.register(key, this[key]);
         });
     }
 }
+

@@ -1,15 +1,21 @@
 import { NgModule }       from '@angular/core';
 import { LocalizedComponent } from './localized.component';
-import { MessagesComponent } from './messages.component';
-
-const COMPONENT_DIRECTIVES: any[] = [LocalizedComponent, MessagesComponent];
+import { LocalizedMessagesComponent } from './messages.component';
+import { CustomMessagesComponent } from './custom.messages.component';
 
 /**
  * Base module
  */
 @NgModule({
-    declarations: [COMPONENT_DIRECTIVES],
-    exports: [COMPONENT_DIRECTIVES]
+    declarations: [
+        LocalizedComponent,
+        LocalizedMessagesComponent,
+        CustomMessagesComponent
+    ],
+    exports: [
+        LocalizedComponent,
+        CustomMessagesComponent
+    ]
 })
 export class LocalizedModule {}
 
